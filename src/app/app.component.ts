@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'login-page';
+  username : string = "";
+  password : string = "";
+  show: boolean= false;
+  submitInput() {
+    if(this.username != null && this.password != null)
+    {
+      console.log("user name is " + this.username);
+      this.clear();
+    }
+  }
+  clear(){
+    this.username ="";
+    this.password = "";
+    this.show = true;
+    }
 }
